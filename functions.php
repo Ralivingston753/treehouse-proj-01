@@ -40,7 +40,7 @@ $quotes [] = [
 function getRandomQuote($quotes){
   // this function is from php documentation of PHP rand. 
  $generation = rand(0 , 4);
-  return $quotes[$generation]["quote"];
+  return $qoutes[$generation]["quote"];
 }
 
 
@@ -48,14 +48,6 @@ function getRandomQuote($quotes){
 
 function printQuote($quotes){
  $random = getRandomQuote($quotes); 
- $storage = "<p class=".  $quotes[$generations]["quote"]. " </p>".
-"<p class=>". $quotes[$generations]["source"] ?> . 
- <?php if ([$generation]["citation"] == FALSE):
-   return " ";
-   elseif ($quotes[$generation]["citation"] == TRUE): 
-     return "<span class=>".  $quotes[$generation]["citation"] ;  "</span>" ?>.
-      <?php if ([$generation]["year"] == FALSE):
-   return " ";
-   elseif ($quotes[$generation]["year"] == TRUE): 
-     return "<span class=>".  $quotes[$generation]["year"] ;  "</span>". "</p>" 
+  echo $random; 
 }
+ 
