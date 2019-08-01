@@ -40,7 +40,7 @@ $quotes [] = [
 function getRandomQuote($quotes){
   // this function is from php documentation of PHP rand. 
  $generation = rand(0 , 4);
-  return $quotes[$generation];
+  return $quotes[$generation]['quote'];
 }
 
 
