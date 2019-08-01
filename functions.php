@@ -40,7 +40,7 @@ $quotes [] = [
 function getRandomQuote($quotes){
   // this function is from php documentation of PHP rand. 
  $generation = rand(0 , 4);
-  return $quotes[$generation]['quote'];
+  return $quotes[$generation];
 }
 
 
@@ -48,5 +48,6 @@ function getRandomQuote($quotes){
 
 function printQuote($quotes){
  $random = getRandomQuote($quotes); 
-  echo $random; 
+  echo $random['quote']; 
+  echo $random["source"]; 
 }
