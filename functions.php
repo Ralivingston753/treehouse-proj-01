@@ -1,5 +1,6 @@
-// PHP - Random Quote Generator
+
 <?php
+// PHP - Random Quote Generator
 // This is my multidimensional array of quote elements
 $quotes [] = [
   "quote" => "Great men are not born great, they grow great",
@@ -40,14 +41,13 @@ $quotes [] = [
 function getRandomQuote($quotes){
   // this function is from php documentation of PHP rand. 
  $generation = rand(0 , 4);
-  return $qoutes[$generation]["quote"];
+  return $quotes[$generation];
 }
 
 
   // Create the printQuote funtion and name it printQuote
 
-function printQuote($quotes){
+function printQuote($array){
  $random = getRandomQuote($quotes); 
   echo $random; 
 }
- 
