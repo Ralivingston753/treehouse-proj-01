@@ -43,17 +43,15 @@ function getRandomQuote($quotes){
   return $quotes[$generation];
 }
 
-
   // Create the printQuote funtion and name it printQuote
 function printQuote($quotes){
  $random = getRandomQuote($quotes); 
-$html_string .= "<p class='quote'>". $random["quote"] ."</p>";
-  "<p class='source'>" . $random["source"] .
-  if ($random['citation']). "<span class='citation'>" . $random ["citation"] . "</span>" ; 
-  if ($random["year"])."<span class='year'> "year"". "</span>" . 
-    "</p>";
-    }
-};
+$html_string .="<p class='quote'>". $random["quote"]."</p>".
+  "<p class='source'>" . $random["source"].
+  if ($random["citation"]== TRUE) {echo "<span class='citation'>".$random["citation"]."</span>"};
+  if ($random["year"]==TRUE){"<span class='year'>". $random["year"] . "</span>" . "</p>"};
+    }; 
+return $html_string;
 ?>
   
   
