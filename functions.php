@@ -4,7 +4,7 @@
 $quotes [] = [
   "quote" => "Great men are not born great, they grow great",
   "source" => "Mario Puzo",
-  "citation"=>"-<i>The Godfather</i>",
+  "citation"=>"The Godfather",
   "year" =>"1997",  
 ];
 
