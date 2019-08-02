@@ -43,9 +43,10 @@ function getRandomQuote($quotes){
   return $quotes[$generation];
 }
 
-  // Here is the print qoute function
+  // Here is the printQuote function
 function printQuote($quotes){
- $random = getRandomQuote($quotes); 
+ $random = getRandomQuote($quotes);
+  //The following html_string chunk is attributed to pseudocode from Jennifer Nordell
 $html_string = "<p class='quote'>". $random["quote"]."</p>";
   $html_string .= "<p class='source'>" . $random["source"];
   if ($random["citation"]==TRUE)$html_string .= "<span class='citation'>". $random["citation"]."</span>";
