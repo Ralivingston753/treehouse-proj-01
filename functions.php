@@ -32,7 +32,7 @@ $quotes [] = [
   "quote" => "Don\"t let yesterday take up too much of today",
   "source" => "Will Rogers",
   "citation"=>0,
-  "year" =>0 ,   
+  "year" => 0,   
   
 ];
 
@@ -43,16 +43,13 @@ function getRandomQuote($quotes){
   return $quotes[$generation];
 }
 
-  // Create the printQuote funtion and name it printQuote
+  // Here is the print qoute function
 function printQuote($quotes){
  $random = getRandomQuote($quotes); 
-$html_string .="<p class='quote'>". $random["quote"]."</p>".
-  "<p class='source'>" . $random["source"].
-  if ($random["citation"]== TRUE) { "<span class='citation'>".$random["citation"]."</span>"};
-  if ($random["year"]==TRUE){"<span class='year'>". $random["year"] . "</span>" . "</p>"};
-    }; 
-return $html_string;
+$html_string = "<p class='quote'>". $random["quote"]."</p>";
+  $html_string .= "<p class='source'>" . $random["source"];
+  if ($random["citation"]==TRUE)$html_string .= "<span class='citation'>". $random["citation"]."</span>";
+  if ($random["year"]==TRUE) $html_string .="<span class='year'>". $random["year"] . "</span>";
+  $html_string .= "</p>";
+     return $html_string;}
 ?>
-  
-  
-
